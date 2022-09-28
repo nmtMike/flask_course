@@ -9,12 +9,13 @@
     <body>
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">HOME PAGE</a>
+                <a class="navbar-brand" href="{{ url_for('index')}} ">HOME PAGE</a>
             </div>
         </nav>
 
         {% block content %}
 
+        <p>{{UserName}} is secured</p>
 
         {% endblock %}
     </body>

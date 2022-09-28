@@ -1,6 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="container">
+    <h4>Hello, welcom to User Name check!</h4>
+    <p>Let's see if your User Name is secured</p>
+    <p>Fill out the form below with a User Name that these restrains</p>
+    
+    <ul>
+        <li>At least an upper case letter</li>
+        <li>At least a lower case letter</li>
+        <li>A number at the end</li>
+    </ul>
 
+    <label for="UserName">User Name</label>
+    <input type="text" name="UserName">
+    <input type="button" value="Submit">
 
+</div>
 {% endblock %}
