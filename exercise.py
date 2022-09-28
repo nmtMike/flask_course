@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -6,8 +6,10 @@ app = Flask(__name__)
 def index():
     return render_template('home_page.html')
 
-@app.route('/<UserName>')
-def user_check(UserName):
+@app.route('/report')
+def user_check():
+    UserName = request.args.get('UserName')
+
     requirements = []
     if not UserName[-1].isnumeric():
         requirements += ['Must have a numeric at the end']
