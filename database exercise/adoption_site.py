@@ -29,7 +29,7 @@ class Puppy(db.Model):
         self.name = name
 
     def __repr__(self):
-        return f'Puppy name: {self.name}'
+        return f'Puppy name: {self.name} with ID: {self.id}'
 
 
 
@@ -74,6 +74,7 @@ def del_pup():
         db.session.commit()
 
         return redirect(url_for('list_pup'))
+        
     return render_template('delete.html', form=form)
 
 
